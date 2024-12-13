@@ -9,6 +9,16 @@
     <style type="text/css"></style>
     </head>
     <body>
-    <script type="text/javascript"></script>
+    <script type="text/javascript">
+        //added json download function
+        $(document).ready(function () {
+            const jsonUrl = "https://tinyurl.com/k4chnujx";
+            $.getJSON(jsonUrl, function (data) {
+                console.log(data); // Verify JSON data
+                plotCO2Data(data); // Call plotCO2Data when the data is downloaded
+            });
+        });
+
+    </script>
     </body>
 </html>
